@@ -8,13 +8,14 @@ class Recommended extends StatefulWidget {
 class _RecommendedState extends State<Recommended> {
   @override
   Widget build(BuildContext context) {
-     return Center(
+     return  Center(
   child: Container(
     margin: const EdgeInsets.all(10.0),
-    color: Colors.green,
+    color: Colors.lime,
     width: 48.0,
     height: 48.0,
   ),
-);
+
+      );
   }
 }

@@ -40,24 +40,23 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        ListView(
-        padding: const EdgeInsets.all(8.0),
-      children: <Widget>[
-        Weather(),
+    return 
+          ListView(
+          padding: const EdgeInsets.all(8.0),
+        children: <Widget>[
+          Weather(),
+        Padding(padding: const EdgeInsets.all(8.0)),
+          Corona(),
+           Padding(padding: const EdgeInsets.all(8.0)) ,
+          Shortcut(),
       Padding(padding: const EdgeInsets.all(8.0)),
-        Corona(),
-         Padding(padding: const EdgeInsets.all(8.0)) ,
-        Shortcut(),
-    Padding(padding: const EdgeInsets.all(8.0)),
-        Recommended(),
-         Padding(padding: const EdgeInsets.all(8.0)),
-        AdvancedTools(),
-      ],
-     ),
-     Search()
-      ],
-    );
+          Recommended(),
+           Padding(padding: const EdgeInsets.all(8.0)),
+          AdvancedTools(),
+           Padding(padding: const EdgeInsets.all(8.0)),
+           Search()
+        ],
+       );
+        
   }
 }

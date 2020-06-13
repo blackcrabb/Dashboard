@@ -8,13 +8,14 @@ class Corona extends StatefulWidget {
 class _CoronaState extends State<Corona> {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return  Center(
   child: Container(
     margin: const EdgeInsets.all(10.0),
-    color: Colors.blue,
+    color: Colors.lime,
     width: 48.0,
     height: 48.0,
   ),
-);
+
+      );
   }
 }

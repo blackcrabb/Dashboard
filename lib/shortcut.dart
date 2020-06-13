@@ -11,10 +11,10 @@ class _ShortcutState extends State<Shortcut> {
     return Center(
   child: Container(
     margin: const EdgeInsets.all(10.0),
-    color: Colors.brown,
+    color: Colors.lime,
     width: 48.0,
     height: 48.0,
   ),
-);
+      );
   }
 }
