@@ -9,7 +9,7 @@ class _CoronaState extends State<Corona> {
   @override
   Widget build(BuildContext context) {
     return  Container(
-    margin: const EdgeInsets.all(10.0),
+    margin: const EdgeInsets.all(5.0),
     padding: const EdgeInsets.all(10.0),
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(20),
@@ -17,11 +17,12 @@ class _CoronaState extends State<Corona> {
     ),
     height: 70.0,
     child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            Text("Coronavirus(COVID -19)",
+            Text("Coronavirus(COVID-19)",
             style: TextStyle(color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: 18,
@@ -37,18 +38,14 @@ class _CoronaState extends State<Corona> {
             ),
           ],
           ),
-         /* Column(
+       Column(
             children: <Widget>[
               Icon(
                 Icons.close,
                 color: Colors.black,
+                size: 18,
               ),
-               Padding(padding: EdgeInsets.all(4.0),),
-               RaisedButton(
-                 color: Colors.blue[300],
-                 child: Text("Click here->",style: TextStyle(fontSize: 10,),),
-                 onPressed: (){},)
-            ],)*/
+         ],),
       ],
     ),
   );

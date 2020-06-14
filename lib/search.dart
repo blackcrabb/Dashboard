@@ -29,6 +29,7 @@ void dispose() {
   Material(
     color: Colors.black,
       child: Container(
+            margin: const EdgeInsets.all(5.0),
             alignment: Alignment.bottomLeft,
             height: 40,
             decoration: BoxDecoration(
