@@ -37,16 +37,19 @@ void dispose() {
               borderRadius: BorderRadius.circular(30),
             ),
             child:Row(
+           //   mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
+            Padding(padding: const EdgeInsets.only(right:5.0 ),),
            Expanded(
              child: Image.asset('assets/GLogo.png',
              alignment: Alignment.center,
              width: 25,height: 25,),
            ),
+           Padding(padding: const EdgeInsets.only(right:5.0 ),),
            Expanded(child: 
            TextField( controller: _controller, 
            style: TextStyle(
-             color: Colors.black,
+             color: Colors.grey[700],
            ),
           decoration: InputDecoration(
             hintStyle: TextStyle(color: Colors.black,
