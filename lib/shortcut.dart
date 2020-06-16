@@ -24,10 +24,11 @@ class _ShortcutState extends State<Shortcut> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
+          Padding(padding: const EdgeInsets.only(bottom: 5),),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              Padding(padding: const EdgeInsets.only(right: 5,top: 10),),
+              Padding(padding: const EdgeInsets.only(right: 5,top: 15),),
             Image.asset('assets/shortcut.png',
             width: 15,height: 15,),
             Padding(padding: const EdgeInsets.only(right: 5,top: 10),),
@@ -40,8 +41,8 @@ class _ShortcutState extends State<Shortcut> {
                 height: 100,
                 child: GridView.count(
                               padding: const EdgeInsets.all(6),
-                              crossAxisSpacing: 55,
-                              mainAxisSpacing: 2,
+                              crossAxisSpacing: 30,
+                              mainAxisSpacing: 1,
                               crossAxisCount: 4,
                               children: <Widget>[
                                       Image.asset('assets/app(1).png'),

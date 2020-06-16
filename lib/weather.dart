@@ -1,5 +1,4 @@
-//import 'dart:convert';
-
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -10,43 +9,37 @@ class Weather extends StatefulWidget {
 
 class _WeatherState extends State<Weather> {
 
-  final String url = "https://api.openweathermap.org/data/2.5/weather?q=New%20Delhi&appid=e46f94d3b8e95b838477bf9cba05fa36";
+  final String url = "https://api.openweathermap.org/data/2.5/weather?q=New%20Delhi&units=metric&appid=e46f94d3b8e95b838477bf9cba05fa36";
 
-  String data;
+  var temp;
+  var now = DateTime.now();
+ 
+  Future getWeather () async {
+    http.Response response = await http.get(url);
+    var result = jsonDecode(response.body);
+    setState(() {
+      this.temp = result['main']['temp'];
+    });
+  }
 
    @override
   void initState(){
     super.initState();
-    this.getJsonData();
+    this.getWeather();
   }
-  Future<String> getJsonData() async {
-    var response = await http.get(
-      Uri.encodeFull(url),
-      headers: {"Accept": "application/json"}
-    );
-   print(response.body); 
-  //  setState(() {
- //    var convertDatatoJson = json.decode(response.body);
- //     data = convertDatatoJson['base'];
- //   });
-
-    return "Success"; 
-  }
-
- // String x = data['temp']
 
   @override
   Widget build(BuildContext context) {
     return  Container(
     margin: const EdgeInsets.only(top: 20),
-    width: 200,
+    width: 250,
     height: 68.0,
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(12),
       color: Colors.black
       ),
     child: Row(
-     // mainAxisAlignment: MainAxisAlignment.start,
+     mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         //1
         Padding(padding: const EdgeInsets.only(right: 8),),
@@ -57,12 +50,18 @@ class _WeatherState extends State<Weather> {
         //4
         Column(
           children: <Widget>[
-            Text("40°C", style: TextStyle(fontSize: 30,color: Colors.white,decoration: TextDecoration.none),),
-            Text("January, 12 May", style: TextStyle(fontSize: 10,color: Colors.white,decoration: TextDecoration.none),)
+            Text(
+           //   temp != null ? 
+              temp.toString() + "\u00B0" + "C" 
+             // : "Loading"
+              , 
+              style: TextStyle(fontSize: 25,color: Colors.white,decoration: TextDecoration.none),),
+               Padding(padding: const EdgeInsets.only(bottom: 4),),
+            Text( now.toString().substring(0,10), style: TextStyle(fontSize: 10,color: Colors.white,decoration: TextDecoration.none),)
           ],
         ),
         //5
-       Padding(padding: const EdgeInsets.only(right: 180),),
+       Padding(padding: const EdgeInsets.only(right: 200),),
         //6
         Column(
          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -81,7 +80,6 @@ class _WeatherState extends State<Weather> {
             )
           ],
         )
-
       ],
     ),
   );
