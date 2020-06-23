@@ -44,16 +44,17 @@ class _HomePageState extends State<HomePage> {
           ListView(
           padding: const EdgeInsets.all(8.0),
         children: <Widget>[
+          //1
           Weather(),
-       // Padding(padding: const EdgeInsets.all(6.0)),
+          //2
           Corona(),
-      //     Padding(padding: const EdgeInsets.all(6.0)) ,
+          //3
           Shortcut(),
-    //  Padding(padding: const EdgeInsets.all(6.0)),
+          //4
           Recommended(),
-    //       Padding(padding: const EdgeInsets.all(8.0)),
+          //5
           AdvancedTools(),
-    //       Padding(padding: const EdgeInsets.all(8.0)),
+          //6
            Search()
         ],
        );

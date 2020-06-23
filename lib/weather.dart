@@ -51,17 +51,17 @@ class _WeatherState extends State<Weather> {
         Column(
           children: <Widget>[
             Text(
-           //   temp != null ? 
+              temp != null ? 
               temp.toString() + "\u00B0" + "C" 
-             // : "Loading"
+              : "!"
               , 
-              style: TextStyle(fontSize: 25,color: Colors.white,decoration: TextDecoration.none),),
+              style: TextStyle(fontSize: 20,color: Colors.white,decoration: TextDecoration.none),),
                Padding(padding: const EdgeInsets.only(bottom: 4),),
             Text( now.toString().substring(0,10), style: TextStyle(fontSize: 10,color: Colors.white,decoration: TextDecoration.none),)
           ],
         ),
         //5
-       Padding(padding: const EdgeInsets.only(right: 200),),
+       Padding(padding: const EdgeInsets.only(right: 192),),
         //6
         Column(
          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
