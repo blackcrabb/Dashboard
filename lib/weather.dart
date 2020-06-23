@@ -9,7 +9,7 @@ class Weather extends StatefulWidget {
 
 class _WeatherState extends State<Weather> {
 
-  final String url = "https://api.openweathermap.org/data/2.5/weather?q=New%20Delhi&units=metric&appid=e46f94d3b8e95b838477bf9cba05fa36";
+  final String url = "https://api.openweathermap.org/data/2.5/weather?q=New%20Delhi&units=metric&appid={yourapikey}";
 
   var temp;
   var now = DateTime.now();
